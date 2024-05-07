@@ -11,11 +11,12 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class AcademicNewsUpdateService {
+public class AcademicNewsUpdateService extends NewsUpdateService{
 
     private final AcademicNewsRepository academicNewsRepository;
     private static long maxNttId = 0L;
 
+    @Override
     public List<String> newsCheck(List<BoardDTO> newList) {
 
         List<String> titleList = new ArrayList<>();

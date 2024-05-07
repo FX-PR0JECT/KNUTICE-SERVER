@@ -13,11 +13,12 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class GeneralNewsUpdateService {
+public class GeneralNewsUpdateService extends NewsUpdateService{
 
     private final GeneralNewsRepository generalNewsRepository;
     private static long maxNttId = 0L;
 
+    @Override
     public List<String> newsCheck(List<BoardDTO> newList) {
 
         List<String> titleList = new ArrayList<>();

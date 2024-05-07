@@ -4,10 +4,7 @@ import com.fx.knutNotice.crawler.KnutCrawler;
 import com.fx.knutNotice.common.KnutURL;
 import com.fx.knutNotice.dto.BoardDTO;
 import com.fx.knutNotice.dto.FcmDTO;
-import com.fx.knutNotice.service.newsUpdateService.AcademicNewsUpdateService;
-import com.fx.knutNotice.service.newsUpdateService.EventNewsUpdateService;
-import com.fx.knutNotice.service.newsUpdateService.GeneralNewsUpdateService;
-import com.fx.knutNotice.service.newsUpdateService.ScholarshipNewsUpdateService;
+import com.fx.knutNotice.service.newsUpdateService.NewsUpdateService;
 import com.google.firebase.messaging.FirebaseMessagingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,10 +20,10 @@ import java.util.List;
 @Slf4j
 public class BoardUpdateService {
 
-    private final GeneralNewsUpdateService generalNewsUpdateService;
-    private final EventNewsUpdateService eventNewsUpdateService;
-    private final AcademicNewsUpdateService academicNewsUpdateService;
-    private final ScholarshipNewsUpdateService scholarshipNewsUpdateService;
+    private final NewsUpdateService generalNewsUpdateService;
+    private final NewsUpdateService eventNewsUpdateService;
+    private final NewsUpdateService academicNewsUpdateService;
+    private final NewsUpdateService scholarshipNewsUpdateService;
 
     private final KnutCrawler knutCrawler;
     private final FcmService fcmService;
